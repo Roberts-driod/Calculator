@@ -23,29 +23,29 @@
       btn.addEventListener("click", handleclick);
 
       function handleclick() {
-        let num1Value = num1.value;
-        let num2Value = num2.value;
+        let num1Value = parseFloat(num1.value);
+        let num2Value = parseFloat(num2.value);
         let opValue = operator.value;
-let result;
-      switch (opValue) {
-        case "+" :
+        let result;
+        switch (opValue) {
+          case "+":
             result = num1Value + num2Value;
             break;
-            case "-" :
-                result = num1Value - num2Value;
-                break;
-            case "*" :
-                result = num1Value * num2Value;
-                break;
-            case "/" :
-                result = num1Value / num2Value;
-                break;
+          case "-":
+            result = num1Value - num2Value;
+            break;
+          case "*":
+            result = num1Value * num2Value;
+            break;
+          case "/":
+            result = num1Value / num2Value;
+            break;
 
-                default: 
-                break;
-      }
+          default:
+            break;
+        }
 
-      output.innerHTML = result;
+        output.innerHTML = result;
       }
     </script>
   </body>
